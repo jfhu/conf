@@ -1,0 +1,186 @@
+set nocompatible
+
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" use php highlighting on phpt files
+autocmd BufNewFile,BufRead *.phpt set ft=php
+" use haskell highlighting on hsc files
+autocmd BufNewFile,BufRead *.hsc set ft=haskell
+autocmd BufNewFile,BufRead *.cabal set ft=cabal
+autocmd BufNewFile,BufRead *.txt set ft=text
+autocmd BufNewFile,BufRead README set ft=text
+
+autocmd FileType python set ts=4 | set shiftwidth=4 | set expandtab |
+  \ set autoindent | set softtabstop=4
+autocmd FileType make set noexpandtab | set tabstop=8 | set shiftwidth=8
+autocmd FileType text set tw=78
+autocmd FileType php set shiftwidth=2|set expandtab
+
+" automatically load svn-commit template
+" autocmd BufNewFile,BufRead svn-commit.*tmp :0r $SVN_COMMIT_TEMPLATE
+
+" kill any trailing whitespace on save
+autocmd FileType c,cabal,cpp,haskell,javascript,php,python,readme,text
+  \ autocmd BufWritePre <buffer>
+  \ :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+" vim7.2 intentionally makes * lamer for php.  wtf
+autocmd FileType php setlocal iskeyword+=$
+
+"
+" general
+"
+
+set tags=tags;/
+
+" searching
+set incsearch                 " incrimental search
+set hlsearch                  " highlighting when searching
+
+" this should get best indenting for most common filetypes
+filetype indent plugin on
+" note: cindent and smartindent do the wrong thing with e.g. indented lines
+" starting with # in certain files.
+" so i think autoindent is more minimal and good default for all filetypes.
+" again, most files will be covered by the previous line.
+set autoindent
+
+set backspace=2
+
+" display
+set nolist                    " show/hide tabs and EOL chars
+set nonumber                  " show/hide line numbers (nu/nonu)
+set scrolloff=5               " scroll offsett, min lines above/below cursor
+set scrolljump=5              " jump 5 lines when running out of the screen
+set sidescroll=10             " minumum columns to scroll horizontally
+set showcmd                   " show command status
+set showmatch                 " flashes matching paren when one is typed
+set showmode                  " show editing mode in status (-- INSERT --)
+set ruler                     " show cursor position
+
+" code folding
+set nofen
+set foldmethod=indent         " indent based folding
+
+" other
+set noerrorbells              " no bells in terminal
+set undolevels=1000           " number of undos stored
+set viminfo='50,"50           " '=marks for x files, "=registers for x files
+
+"
+" things you may be interested in for your .vimrc
+"
+
+" highlight literal tabs
+" (but don't highlight trailing whitespace; it's annoying as you type)
+" actually even tabs are annoying since they are in e.g. git commit msgs
+" could make it just for php but i'm not sure it's even needed
+"match Error '\t'
+
+" bind "gb" to "git blame" for visual and normal mode.
+:vmap gb :<C-U>!git blame % -L<C-R>=line("'<") <CR>,<C-R>=line("'>") <CR><CR>
+:nmap gb :!git blame %<CR>
+
+" highlight overlength
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+syn match tab display "\t"
+hi link tab Error
+
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+autocmd FileType c,cabal,cpp,haskell,javascript,php,python,readme,text
+  \ autocmd BufWritePre <buffer>
+  \ :call <SID>StripTrailingWhitespaces()
+
+" A function for executing git grep from within vim.
+" Run ':GG some_regexp' to search.  (Only | needs to be escaped.)
+"
+" @author dreiss
+function! GitGrep(regex)
+  let old_grep = &grepprg
+  let &grepprg = "git grep -n '$*' "
+  " The GNU Bourne-Again SHell has driven me to this.
+  let search = substitute(a:regex, "'", "'\"'\"'", "g")
+  execute "silent grep! ".search
+  copen
+  execute "normal \<c-w>J"
+  let &grepprg = old_grep
+endfunction
+command! -nargs=+ GG call GitGrep(<q-args>)
+
+" Nagivation
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
+set cursorline
+set number
+set ignorecase smartcase
+set incsearch
+set linebreak
+"set foldcolumn=4
+"set hidden
+set scrolloff=4
+
+" Highlight cursor line
+:hi CursorLine cterm=none ctermbg=0
+
+" NERD Tree
+nmap <script> <silent> <unique> <Leader>dd :NERDTreeFind<CR>
+nmap <script> <silent> <unique> <Leader>dt :NERDTreeToggle<CR>
+
+" bclose
+nnoremap <silent> <Leader>bd :Kwbd<CR>
+
+" fugitive
+set laststatus=2
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" bufexplorer
+nmap <script> <silent> <unique> <Leader>be :BufExplorer<CR>
+nmap <script> <silent> <unique> <Leader>bs :BufExplorerHorizontalSplit<CR>
+nmap <script> <silent> <unique> <Leader>bv :BufExplorerVerticalSplit<CR>
+
+" phpfolding
+map <F5> <Esc>:EnableFastPHPFolds<Cr>
+map <F6> <Esc>:EnablePHPFolds<Cr>
+map <F7> <Esc>:DisablePHPFolds<Cr>
+" Folding colors
+:highlight Folded ctermfg=1 ctermbg=none
+
+" Todo Colors
+:highlight Todo ctermbg=0
+:highlight Todo ctermfg=7
+
+" Auto completion colors
+:highlight Pmenu ctermbg=1 ctermfg=7
+:highlight PmenuSel ctermbg=7 ctermfg=1
+
+" ErrorMsg Color
+:highlight ErrorMsg cterm=bold ctermfg=5 ctermbg=8
+
+" Search Highlight Cancel with ESC
+nnoremap <esc> :noh<return><esc>
+
+:set hidden
+
+" Auto reload files
+:set autoread
+
+if has("gui_running")
+  :colorscheme cobalt
+  set guifont=Monaco:h13
+else
+  :colorscheme bclear
+endif
+syntax on;

@@ -1,0 +1,7 @@
+Personal Configurations
+
+== Vim ==
+Use for git commit, add to ~/.profile:
+export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
+https://github.com/b4winckler/macvim/wiki/FAQ
+
