@@ -184,3 +184,13 @@ else
   :colorscheme bclear
 endif
 syntax on;
+
+" 80 char lines
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
+:highlight ColorColumn guibg=#002943;
+
+" Vim Grep from PWD
+map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*" <Bar> cw<CR>
+
