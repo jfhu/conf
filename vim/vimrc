@@ -194,3 +194,6 @@ endif
 " Vim Grep from PWD
 map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*" <Bar> cw<CR>
 
+" wild
+set wildmode=longest:full
+set wildmenu
