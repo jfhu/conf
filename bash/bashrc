@@ -1,6 +1,6 @@
-source conf/bash/bash_completion/git
+source ~/conf/bash/bash_completion/git
 
-source conf/bash/term_colors
+source ~/conf/bash/term_colors
 PROMPT_COLOR=$G
 if [ ${UID} -eq 0 ]; then
   PROMPT_COLOR=$R ### root
