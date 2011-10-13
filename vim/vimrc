@@ -197,3 +197,7 @@ map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*" <Bar> c
 " wild
 set wildmode=longest:full
 set wildmenu
+
+" paste mode
+set pastetoggle=<F2>
+
