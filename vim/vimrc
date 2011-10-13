@@ -169,9 +169,6 @@ map <F7> <Esc>:DisablePHPFolds<Cr>
 " ErrorMsg Color
 :highlight ErrorMsg cterm=bold ctermfg=5 ctermbg=8
 
-" Search Highlight Cancel with ESC
-nnoremap <esc> :noh<return><esc>
-
 :set hidden
 
 " Auto reload files
