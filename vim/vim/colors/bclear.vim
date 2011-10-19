@@ -67,3 +67,8 @@ hi Ignore       guifg=#c8c8c8
 hi Error        guifg=#ffffff   guibg=#c81414
 hi Todo         guifg=#c81414   guibg=#ffffff
 
+hi DiffText     ctermbg=1
+hi DiffAdd      ctermbg=0
+hi DiffChange   ctermbg=0
+hi DiffDelete   ctermbg=0
+
