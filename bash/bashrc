@@ -21,3 +21,9 @@ export PROMPT_COMMAND='if [ $? -ne 0 ]; then CURSOR_COLOR=`echo -e "\033[0;31m"`
 alias ls='ls -FG'
 alias ll='ls -l'
 
+alias note='growlnotify -n "note" -s -m'
+
+alias sshtunnel='sudo ssh -qTfNnC -D 8080'
+
+export LC_CTYPE="en_US.UTF-8"
+

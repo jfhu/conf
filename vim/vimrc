@@ -12,6 +12,7 @@ autocmd BufNewFile,BufRead *.hsc set ft=haskell
 autocmd BufNewFile,BufRead *.cabal set ft=cabal
 autocmd BufNewFile,BufRead *.txt set ft=text
 autocmd BufNewFile,BufRead README set ft=text
+autocmd BufNewFile,BufRead *.ino set ft=cpp
 
 autocmd FileType python set ts=4 | set shiftwidth=4 | set expandtab |
   \ set autoindent | set softtabstop=4
@@ -197,4 +198,7 @@ set wildmenu
 
 " paste mode
 set pastetoggle=<F2>
+
+" Count number of printed words in latex document
+:map <F3> :w !detex \| wc -w<CR>
 
