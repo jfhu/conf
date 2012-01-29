@@ -177,7 +177,8 @@ map <F7> <Esc>:DisablePHPFolds<Cr>
 
 if has("gui_running")
   :colorscheme cobalt
-  set guifont=Monaco:h12
+  " set guifont=Monaco:h12
+  set guifont=Inconsolata
 else
   :colorscheme bclear
 endif
@@ -187,7 +188,7 @@ syntax on;
 if exists('+colorcolumn')
   set colorcolumn=80
 endif
-:highlight ColorColumn guibg=#002943;
+" :highlight ColorColumn;
 
 " Vim Grep from PWD
 map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*" <Bar> cw<CR>
@@ -202,3 +203,5 @@ set pastetoggle=<F2>
 " Count number of printed words in latex document
 :map <F3> :w !detex \| wc -w<CR>
 
+" Do not put the yankring history v2 file in home
+let g:yankring_history_dir='$HOME/.vim/'
