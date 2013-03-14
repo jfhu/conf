@@ -98,9 +98,9 @@ fun! <SID>StripTrailingWhitespaces()
   %s/\s\+$//e
   call cursor(l, c)
 endfun
-autocmd FileType c,cabal,cpp,haskell,javascript,php,python,readme,text
-  \ autocmd BufWritePre <buffer>
-  \ :call <SID>StripTrailingWhitespaces()
+" autocmd FileType c,cabal,cpp,haskell,javascript,php,python,readme,text
+"   \ autocmd BufWritePre <buffer>
+"   \ :call <SID>StripTrailingWhitespaces()
 
 " A function for executing git grep from within vim.
 " Run ':GG some_regexp' to search.  (Only | needs to be escaped.)
