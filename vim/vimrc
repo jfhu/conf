@@ -6,6 +6,8 @@ set shiftwidth=2
 set expandtab
 
 set runtimepath+=~/.vim/ultisnips_rep
+set runtimepath+=~/.vim/l9
+set runtimepath+=~/.vim/autocomplpop
 
 " use php highlighting on phpt files
 autocmd BufNewFile,BufRead *.phpt set ft=php
