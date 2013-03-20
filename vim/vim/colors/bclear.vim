@@ -42,8 +42,8 @@ hi SpellCap     guifg=#000000   guibg=#fff5c3   guisp=#14b9c8   gui=undercurl
 hi SpellRare    guifg=#000000   guibg=#fff5c3   guisp=#4cbe13   gui=undercurl
 hi SpellLocal   guifg=#000000   guibg=#fff5c3   guisp=#000000   gui=undercurl
 hi Pmenu        guifg=#ffffff   guibg=#323232
-hi PmenuSel     guifg=#ffffff   guibg=#1994d1
-hi PmenuSbar    guifg=#323232   guibg=#323232
+hi PmenuSel     guifg=#ffffff   guibg=#1994d1	ctermbg=5	ctermfg=0
+hi PmenuSbar    guifg=#323232   guibg=#323232	ctermbg=5	ctermfg=0
 hi PmenuThumb   guifg=#646464   guibg=#646464   gui=none
 hi TabLine      guifg=#f0f0f0   guibg=#646464   gui=none
 hi TabLineSel   guifg=#ffffff   guibg=#323232   gui=none
