@@ -5,6 +5,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set runtimepath+=~/.vim/ultisnips_rep
+
 " use php highlighting on phpt files
 autocmd BufNewFile,BufRead *.phpt set ft=php
 " use haskell highlighting on hsc files
@@ -205,3 +207,11 @@ set pastetoggle=<F2>
 
 " Do not put the yankring history v2 file in home
 let g:yankring_history_dir='$HOME/.vim/'
+
+
+" tab indent
+nmap <tab> v>
+nmap <s-tab> v<
+vmap <tab> >gv
+vmap <s-tab> <gv
+
