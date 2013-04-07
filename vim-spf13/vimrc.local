@@ -1,0 +1,49 @@
+" do not maximize window when switching windows
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+
+" snip author string
+let g:snips_author = 'Jianfeng Hu <immilki@gmail.com>'
+
+" vimbackup, vimviews, vimundo, vimswap folders
+let g:spf13_consolidated_directory = $HOME . '/.vimm/'
+
+" NERDTree
+nnoremap <leader>dt :NERDTree<CR>
+
+" CtrlP keymapping
+let g:ctrlp_map = '<leader>t'
+nnoremap <leader>r :CtrlPMRU<CR>
+"nnoremap <leader>b :CtrlPBuffer<CR>
+
+" Bclose
+nnoremap <Leader>bq :Bclose!<CR>
+
+" Do not put the yankring history file in home
+let g:yankring_history_dir = $HOME . '/.vimm/'
+
+" tab indent
+nmap <tab> v>
+nmap <s-tab> v<
+vmap <tab> >gv
+vmap <s-tab> <gv
+
+" no transparency
+if has('gui_running')
+    set transparency=0 
+endif
+
+" maximizes windows
+if has('gui_running')
+    set lines=999 columns=999
+endif
+
+" font
+if has('gui_running')
+    set guifont=Source\ Code\ Pro:h12
+endif
+
+" high contrast
+let g:solarized_contrast='high'

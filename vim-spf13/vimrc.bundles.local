@@ -1,0 +1,12 @@
+" do not chdir when opening a new buffer
+"let g:spf13_no_autochdir = 1
+
+" use default leader '\'
+let g:spf13_leader='\'
+
+" specify the groups of bundles in use
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'html', 'misc']
+
+Bundle 'vim-scripts/YankRing.vim'
+Bundle 'rbgrouleff/bclose.vim'
+Bundle 'vim-scripts/bufexplorer.zip'
