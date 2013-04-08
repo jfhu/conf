@@ -47,3 +47,11 @@ endif
 
 " high contrast
 let g:solarized_contrast='high'
+
+" brighter font
+:hi Normal guifg=#d6dbdc
+
+" no spell check
+:set nospell
+
+let g:NERDTreeIgnore+=['\.DS_Store']
