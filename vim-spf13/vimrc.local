@@ -54,4 +54,12 @@ let g:solarized_contrast='high'
 " no spell check
 :set nospell
 
+" color in terminal
+:hi LineNr ctermbg=16
+:hi CursorLine ctermbg=33
+
+let g:indent_guides_start_level=15
+
 let g:NERDTreeIgnore+=['\.DS_Store']
+
+
