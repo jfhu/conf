@@ -10,6 +10,7 @@ alias lpd='lp -o cpi=15 -o lpi=9' # print to default DYMO printer
 alias sshtunnel='sudo ssh -qTfNnC -D 8080'
 alias notify='growlnotify -n "note" -s -m'
 alias tailf='tail -f'
+alias tmux='tmux -2' # force working in 256 colors 
 
 alias ls='ls $LS_COLOR_ARG'
 alias l='ls'
