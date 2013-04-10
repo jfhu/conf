@@ -56,10 +56,13 @@ let g:solarized_contrast='high'
 
 " color in terminal
 :hi LineNr ctermbg=16
-:hi CursorLine ctermbg=33
+:hi CursorLine ctermbg=33 ctermfg=3
 
+" no indent guides
 let g:indent_guides_start_level=15
 
+" cleaner NERD Tree
 let g:NERDTreeIgnore+=['\.DS_Store']
 
-
+" hopefully fix it
+inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()."\<CR>" : "\<CR>"
