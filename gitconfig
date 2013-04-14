@@ -11,3 +11,4 @@
     st = status
     ci = commit -v
     br = branch
+    l  = log
