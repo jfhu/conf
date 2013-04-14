@@ -9,5 +9,5 @@
 
 [alias]
     st = status
-    ci = commit
+    ci = commit -v
     br = branch
