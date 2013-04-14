@@ -1,6 +1,8 @@
+cd ~
 git clone https://github.com/jfhu/conf.git .conf
-ln -s ~/.conf/bash/bashrc .bashrc
-ln -s ~/.conf/tmux.conf .tmux.conf
-ln -s ~/.conf/vim/vim .vim
-ln -s ~/.conf/vim/vimrc .vimrc
+ln -s .conf/bash/bashrc .bashrc
+ln -s .conf/tmux.conf .tmux.conf
+# ln -s .conf/vim/vim .vim
+# ln -s .conf/vim/vimrc .vimrc
+ln -s .conf/gitconfig .gitconfig
 # optionally modify ./conf/bash/local/*.bash

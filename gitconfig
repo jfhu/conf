@@ -1,0 +1,13 @@
+[core]
+[user]
+	name = Jianfeng Hu
+	email = immilki@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = auto
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
