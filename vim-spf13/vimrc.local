@@ -50,6 +50,7 @@ let g:solarized_contrast='high'
 
 " brighter font
 :hi Normal guifg=#d6dbdc
+:hi Comment guifg=#808085
 
 " no spell check
 :set nospell
@@ -66,3 +67,5 @@ let g:NERDTreeIgnore+=['\.DS_Store']
 
 " hopefully fix it
 inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()."\<CR>" : "\<CR>"
+
+let g:tex_conceal=""
