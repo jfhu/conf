@@ -1,5 +1,5 @@
 export CONF_HOME=$HOME/.conf
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/texbin:/opt/local/bin:/opt/local/sbin:$PATH
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LS_COLOR_ARG='-G'
