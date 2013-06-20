@@ -21,6 +21,9 @@ nnoremap <leader>r :CtrlPMRU<CR>
 " Bclose
 nnoremap <Leader>bq :Bclose!<CR>
 
+" Don't sound bell
+:set visualbell
+
 " Do not put the yankring history file in home
 let g:yankring_history_dir = $HOME . '/.vimm/'
 
