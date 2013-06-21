@@ -19,6 +19,9 @@ let g:pymode_lint = 0
 " Don't run Python
 let g:pymode_run = 0
 
+" CtrlP don't find working path
+let g:ctrlp_working_path_mode = 0
+
 
 " NERDTree
 nnoremap <leader>dt :NERDTree<CR>

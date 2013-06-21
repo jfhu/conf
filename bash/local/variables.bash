@@ -1,1 +1,1 @@
-export LS_COLOR_ARG='--color'
+# export LS_COLOR_ARG='--color'
