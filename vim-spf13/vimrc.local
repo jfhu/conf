@@ -10,13 +10,25 @@ let g:snips_author = 'Jianfeng Hu <immilki@gmail.com>'
 " vimbackup, vimviews, vimundo, vimswap folders
 let g:spf13_consolidated_directory = $HOME . '/.vimm/'
 
+" disable python breakpoint
+let g:pymode_breakpoint = 0
+
+" Disable pylint
+let g:pymode_lint = 0
+
+" Don't run Python
+let g:pymode_run = 0
+
+
 " NERDTree
 nnoremap <leader>dt :NERDTree<CR>
 
+
 " CtrlP keymapping
 let g:ctrlp_map = '<leader>t'
-nnoremap <leader>r :CtrlPMRU<CR>
-"nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>R :CtrlPMRU<CR>
+"nnoremap <leader>B :CtrlPBuffer<CR>
+nnoremap <leader>B :BufExplorer<CR>
 
 " Bclose
 nnoremap <Leader>bq :Bclose!<CR>
@@ -60,7 +72,7 @@ let g:solarized_contrast='high'
 
 " color in terminal
 :hi LineNr ctermbg=16
-:hi CursorLine ctermbg=33 ctermfg=3
+:hi CursorLine ctermbg=3
 
 " no indent guides
 let g:indent_guides_start_level=15
@@ -72,3 +84,4 @@ let g:NERDTreeIgnore+=['\.DS_Store']
 inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()."\<CR>" : "\<CR>"
 
 let g:tex_conceal=""
+

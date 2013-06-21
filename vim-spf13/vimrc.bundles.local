@@ -10,6 +10,7 @@ let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 
 " To override all the included bundles, put
 let g:override_spf13_bundles = 1
 " in your .vimrc.bundles.local file"
+"
 " General
 if count(g:spf13_bundle_groups, 'general')
     Bundle 'scrooloose/nerdtree'
@@ -73,9 +74,9 @@ endif
 if count(g:spf13_bundle_groups, 'python')
     " Pick either python-mode or pyflakes & pydoc
     Bundle 'klen/python-mode'
-    Bundle 'python.vim'
-    Bundle 'python_match.vim'
-    Bundle 'pythoncomplete'
+    "Bundle 'python.vim'
+    "Bundle 'python_match.vim'
+    "Bundle 'pythoncomplete'
 endif
 
 " Javascript

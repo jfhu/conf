@@ -4,9 +4,9 @@ export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LS_COLOR_ARG='-G'
 
-if [ -e `which virtualenvwrapper.sh` ]; then
-    source `which virtualenvwrapper.sh`
-fi
+# if [ -e `which virtualenvwrapper.sh` ]; then
+#     source `which virtualenvwrapper.sh`
+# fi
 
 alias matlabt="matlab -nodesktop -nosplash && source ~/.bash_profile"
 alias mcurl='curl -sL -w "\nstatus code: %{http_code} | time: %{time_total} | type: %{content_type}\n"'
@@ -15,6 +15,7 @@ alias sshtunnel='sudo ssh -qTfNnC -D 8080'
 alias notify='growlnotify -n "note" -s -m'
 alias tailf='tail -f'
 alias tmux='tmux -2' # force working in 256 colors 
+alias ta='tmux attach'
 
 alias ls='ls $LS_COLOR_ARG'
 alias l='ls'

@@ -28,9 +28,9 @@ autocmd FileType php set shiftwidth=2|set expandtab
 " autocmd BufNewFile,BufRead svn-commit.*tmp :0r $SVN_COMMIT_TEMPLATE
 
 " kill any trailing whitespace on save
-autocmd FileType c,cabal,cpp,haskell,javascript,php,python,readme,text
-  \ autocmd BufWritePre <buffer>
-  \ :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+" autocmd FileType c,cabal,cpp,haskell,javascript,php,python,readme,text
+"   \ autocmd BufWritePre <buffer>
+"   \ :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 " vim7.2 intentionally makes * lamer for php.  wtf
 autocmd FileType php setlocal iskeyword+=$
