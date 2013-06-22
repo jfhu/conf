@@ -32,7 +32,7 @@ if count(g:spf13_bundle_groups, 'general')
     if !exists('g:spf13_no_views')
         Bundle 'vim-scripts/restore_view.vim'
     endif
-    Bundle 'airblade/vim-gitgutter'
+    "Bundle 'airblade/vim-gitgutter'
     Bundle 'tpope/vim-abolish.git'
 endif
 
@@ -73,7 +73,7 @@ endif
 " Python
 if count(g:spf13_bundle_groups, 'python')
     " Pick either python-mode or pyflakes & pydoc
-    Bundle 'klen/python-mode'
+    "Bundle 'klen/python-mode'
     "Bundle 'python.vim'
     "Bundle 'python_match.vim'
     "Bundle 'pythoncomplete'
