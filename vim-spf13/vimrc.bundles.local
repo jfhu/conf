@@ -32,8 +32,8 @@ if count(g:spf13_bundle_groups, 'general')
     if !exists('g:spf13_no_views')
         Bundle 'vim-scripts/restore_view.vim'
     endif
-    "Bundle 'airblade/vim-gitgutter'
-    Bundle 'tpope/vim-abolish.git'
+    Bundle 'airblade/vim-gitgutter'
+    "Bundle 'tpope/vim-abolish.git'
 endif
 
 " General Programming
@@ -42,7 +42,7 @@ if count(g:spf13_bundle_groups, 'programming')
     Bundle 'scrooloose/syntastic'
     Bundle 'tpope/vim-fugitive'
     Bundle 'mattn/webapi-vim'
-    Bundle 'mattn/gist-vim'
+    "Bundle 'mattn/gist-vim'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'godlygeek/tabular'
     if executable('ctags')
@@ -73,10 +73,12 @@ endif
 " Python
 if count(g:spf13_bundle_groups, 'python')
     " Pick either python-mode or pyflakes & pydoc
+    Bundle 'kevinw/pyflakes-vim'
+    Bundle 'fs111/pydoc.vim'
     "Bundle 'klen/python-mode'
-    "Bundle 'python.vim'
+    Bundle 'python.vim'
     "Bundle 'python_match.vim'
-    "Bundle 'pythoncomplete'
+    Bundle 'pythoncomplete'
 endif
 
 " Javascript
@@ -118,10 +120,10 @@ endif
 " Misc
 if count(g:spf13_bundle_groups, 'misc')
     Bundle 'tpope/vim-markdown'
-    Bundle 'spf13/vim-preview'
-    Bundle 'tpope/vim-cucumber'
-    Bundle 'quentindecock/vim-cucumber-align-pipes'
-    Bundle 'Puppet-Syntax-Highlighting'
+    "Bundle 'spf13/vim-preview'
+    "Bundle 'tpope/vim-cucumber'
+    "Bundle 'quentindecock/vim-cucumber-align-pipes'
+    "Bundle 'Puppet-Syntax-Highlighting'
 endif
 
 
@@ -135,3 +137,4 @@ endif
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rbgrouleff/bclose.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
+

@@ -67,8 +67,11 @@ endif
 let g:solarized_contrast='high'
 
 " brighter font
-:hi Normal guifg=#d6dbdc
-:hi Comment guifg=#808085
+:hi Normal guifg=#d6dbdc ctermfg=249
+:hi Comment guifg=#808085 ctermfg=1
+
+" gitgutter sign
+:hi SignColumn ctermbg=none
 
 " no spell check
 :set nospell
