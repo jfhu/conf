@@ -4,9 +4,9 @@ export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LS_COLOR_ARG='-G'
 
-# if [ -e `which virtualenvwrapper.sh` ]; then
-#     source `which virtualenvwrapper.sh`
-# fi
+if [ `which virtualenvwrapper.sh` ]; then
+    source `which virtualenvwrapper.sh`
+fi
 
 alias matlabt="matlab -nodesktop -nosplash && source ~/.bash_profile"
 alias mcurl='curl -sL -w "\nstatus code: %{http_code} | time: %{time_total} | type: %{content_type}\n"'
