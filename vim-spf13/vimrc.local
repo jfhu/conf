@@ -20,7 +20,11 @@ let g:pymode_lint = 0
 let g:pymode_run = 0
 
 " CtrlP don't find working path
-let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_working_path_mode = 0
+
+" Q only
+nmap <leader>ta :CtrlP ~/ans/web/lib/a<CR>
+nmap <leader>tp :CtrlP ~/ans/venv/answeb/answeb/public<CR>
 
 
 " NERDTree
