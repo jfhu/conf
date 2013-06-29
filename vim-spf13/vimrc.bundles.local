@@ -39,7 +39,7 @@ endif
 " General Programming
 if count(g:spf13_bundle_groups, 'programming')
     " Pick one of the checksyntax, jslint, or syntastic
-    Bundle 'scrooloose/syntastic'
+    "Bundle 'scrooloose/syntastic'
     Bundle 'tpope/vim-fugitive'
     Bundle 'mattn/webapi-vim'
     "Bundle 'mattn/gist-vim'
@@ -73,8 +73,9 @@ endif
 " Python
 if count(g:spf13_bundle_groups, 'python')
     " Pick either python-mode or pyflakes & pydoc
-    Bundle 'kevinw/pyflakes-vim'
+    "Bundle 'kevinw/pyflakes-vim'
     Bundle 'fs111/pydoc.vim'
+    Bundle 'nvie/vim-flake8'
     "Bundle 'klen/python-mode'
     Bundle 'python.vim'
     "Bundle 'python_match.vim'
@@ -137,4 +138,4 @@ endif
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rbgrouleff/bclose.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
-
+Bundle 'milkypostman/vim-togglelist'
