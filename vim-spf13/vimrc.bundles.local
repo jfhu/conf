@@ -79,7 +79,7 @@ if count(g:spf13_bundle_groups, 'python')
     "Bundle 'klen/python-mode'
     Bundle 'python.vim'
     "Bundle 'python_match.vim'
-    Bundle 'pythoncomplete'
+    "Bundle 'pythoncomplete'
 endif
 
 " Javascript
@@ -139,3 +139,4 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rbgrouleff/bclose.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'milkypostman/vim-togglelist'
+Bundle 'davidhalter/jedi-vim'
