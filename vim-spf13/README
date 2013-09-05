@@ -1,3 +1,8 @@
+1. bash spf13-vim3.sh
+2. ln -s *.local to your home
+3. bash update_bundles.sh
+
+
 http://vim.spf13.com
 https://github.com/spf13/spf13-vim
 
