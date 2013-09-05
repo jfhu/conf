@@ -1,8 +1,12 @@
 cd ~
 git clone https://github.com/jfhu/conf.git .conf
+
+# Bash: run this line or add "source ~/.conf/bash/bashrc" in existing .bashrc
 ln -s .conf/bash/bashrc .bashrc
+# then optionally modify ./conf/bash/local/variables.bash
+
+# Tmux
 ln -s .conf/tmux.conf .tmux.conf
-# ln -s .conf/vim/vim .vim
-# ln -s .conf/vim/vimrc .vimrc
+
+# Git
 ln -s .conf/gitconfig .gitconfig
-# optionally modify ./conf/bash/local/*.bash
